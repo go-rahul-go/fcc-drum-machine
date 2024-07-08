@@ -1,0 +1,86 @@
+h1{
+  text-align: center;
+  text-transform: capitalize;
+  border-bottom: 1px solid gray;
+  padding:7px 0px;
+  width:98%;
+  margin: auto;
+}
+.container{
+  width:50%;
+
+
+  margin:15vh auto;
+  display:flex;
+  flex-direction: column;
+  padding:1rem;
+  gap:10px;
+  background-color: rgb(126, 126, 121);
+  border-radius: 0.6rem;
+}
+.drum{
+  width:100%;
+  height:50vh;
+  /* border:1px solid rgb(255, 136, 0); */
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  place-items: center;
+  gap:10px;
+  row-gap: 15px;
+}
+#display{
+  width:100%;
+  height:10vh;
+  /* border:2px solid blue; */
+  color:rgb(18, 18, 18);
+  display: grid;
+  place-items: center;
+  background-color: rgb(183, 180, 180);
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+.drum-pad{
+  width:90%;
+  height: 95%;
+  background-color: rgb(40, 39, 39);
+  color:rgb(255, 251, 0);
+  text-transform: capitalize;
+  font-size: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius:10px;
+  box-shadow: 0px 2px 5px gray;
+  transition: all 200ms linear;
+}
+.drum-pad:hover{
+  cursor: pointer;
+
+}
+.drum-pad:active{
+  box-shadow:0px 5px 5px rgb(255, 68, 0);
+  transform: perspective(500px) translateZ(-100px);
+}
+.drum-pad:nth-child(2):active{
+  box-shadow:0px 5px 5px rgb(72, 255, 0);
+}
+.drum-pad:nth-child(even):active{
+  box-shadow:0px 5px 5px rgb(242, 0, 255);
+}
+.container:focus{
+  outline: 5px dotted rgb(0, 179, 255);
+  outline-offset:15px;
+}
+
+@media (max-width:900px)
+{
+  .container{
+    width:90%;
+  }
+}
+
+@media (min-width:900px) and (max-width:1200px)
+{
+  .container{
+    width:70%;
+  }
+}
